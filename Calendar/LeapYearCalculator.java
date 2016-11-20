@@ -219,6 +219,10 @@ public class LeapYearCalculator {
         int h = (int) (30.6001 * (c + 1));
         int i = (int) ((f + g) + (h + 1) + 5);
         int j = (int) (i % 7);
-        return --j;
+        --j;
+        if(j < 0){
+        	j += 7;
+        }
+        return j;
 	}
 }
