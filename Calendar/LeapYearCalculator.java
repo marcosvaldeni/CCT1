@@ -6,7 +6,7 @@ public class LeapYearCalculator {
 	}
 
 	//Method
-	void isLeapYear(int year) {
+	void isLeapYear() {
 		if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
 			System.out.println("Yes! " + year + " is a leap year!");
 			System.out.println("");

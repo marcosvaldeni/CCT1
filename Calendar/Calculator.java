@@ -4,7 +4,7 @@ public class Calculator {
 
 		LeapYearCalculator checkLeapYaer = new LeapYearCalculator(1500);
 		
-		checkLeapYaer.isLeapYear(checkLeapYaer.year);
+		checkLeapYaer.isLeapYear();
 		
 		checkLeapYaer.displayCalendar();
 		//System.out.println(checkLeapYaer.daysWeek(6,2019));
