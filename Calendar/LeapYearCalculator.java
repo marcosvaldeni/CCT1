@@ -5,6 +5,7 @@ public class LeapYearCalculator {
 		this.year = year;
 	}
 
+	//Method
 	void isLeapYear(int year) {
 		if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
 			System.out.println("Yes! " + year + " is a leap year!");
@@ -151,11 +152,16 @@ public class LeapYearCalculator {
 		}
 	}
 
+
 	static int toRotateDays(int months){
 		int days = 0;
 		
 		if(months == 2){
-			days = 29;
+			if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+				days = 29;
+			}else{
+				days = 28;
+			}
 		}else if(months <= 7){
 			if (months % 2 == 0) {
 				days = 30;
