@@ -153,7 +153,7 @@ public class LeapYearCalculator {
 	}
 
 
-	static int toRotateDays(int months){
+	public int toRotateDays(int months){
 		int days = 0;
 		
 		if(months == 2){
@@ -208,7 +208,7 @@ public class LeapYearCalculator {
 		}
 	}
 	
-	static int daysWeek(int month, int y){
+	public int daysWeek(int month, int y){
 		int a = ((12 - month) / 10);
         int b = y - a;
         int c = month + (12 * a);
