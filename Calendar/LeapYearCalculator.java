@@ -209,34 +209,16 @@ public class LeapYearCalculator {
 	}
 	
 	static int daysWeek(int month, int y){
-		if(month == 2){
-			int a = ((12 - month) / 10);
-	        int b = y - a;
-	        int c = month + (12 * a);
-	        int d = b / 100;
-	        int e = d / 4;
-	        int f = 2 - d + e;
-	        int g = (int) (365.25 * b);
-	        int h = (int) (30.6001 * (c + 1));
-	        int i = (int) ((f + g) + (h + 1) + 5);
-	        int j = (int) (i % 7);
-	        return --j;
-		}
-
-		int d = 1;
-		int m;
-		int k;
-		int w;
-		
-		if(month <= 2){
-			y--;
-		}
-		m = (month - 2 + 12) % 12;
-		
-		k = 5*(y % 4) + 4 * (y % 100) + 6 * (y % 400);
-		w = (d +(int)(2.6*m - 0.2) + k) % 7;
-		
-		return w;
-		
+		int a = ((12 - month) / 10);
+        int b = y - a;
+        int c = month + (12 * a);
+        int d = b / 100;
+        int e = d / 4;
+        int f = 2 - d + e;
+        int g = (int) (365.25 * b);
+        int h = (int) (30.6001 * (c + 1));
+        int i = (int) ((f + g) + (h + 1) + 5);
+        int j = (int) (i % 7);
+        return --j;
 	}
 }
